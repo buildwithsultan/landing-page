@@ -58,6 +58,10 @@ body {
   color: white;
 }
 
+/* .a-li:focus {
+  outline: none;
+} */
+
 .button {
   margin: 10px;
   color: #524646;
@@ -186,4 +190,142 @@ body {
 .button-judul:hover {
   border-color: #3b82f6;
   color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .navbar-container {
+    width: 100%;
+  }
+
+  .ul-nav {
+    justify-content: space-around;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .a-li {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 6px;
+  }
+
+  .button {
+    margin: 0;
+  }
+
+  .main-container {
+    height: calc(100vh - 190px);
+    margin: 10px;
+  }
+
+  .judul-container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .logo-judul {
+    width: 76px;
+    height: 76px;
+  }
+
+  .span-1,
+  .span-2 {
+    font-size: clamp(30px, 7vw, 50px);
+    line-height: 1.1;
+  }
+
+  .span-3 {
+    max-width: 90%;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .floating-img {
+    width: 120px;
+  }
+
+  .img-bottom-left {
+    height: 135px;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    min-height: 120px;
+    padding: 10px 8px;
+  }
+
+  .brand-container {
+    gap: 6px;
+  }
+
+  .chrono-teks {
+    font-size: 15px;
+  }
+
+  .logo-image {
+    width: 28px;
+    height: 28px;
+  }
+
+  .a-li {
+    padding: 7px 5px;
+    font-size: 12px;
+  }
+
+  .button {
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+
+  .main-container {
+    height: calc(100vh - 150px);
+    margin: 8px;
+    border-radius: 12px;
+  }
+
+  .floating-img {
+    display: none;
+  }
+
+  .judul-container {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .logo-judul {
+    width: 64px;
+    height: 64px;
+  }
+
+  .span-1,
+  .span-2 {
+    font-size: clamp(24px, 8vw, 36px);
+  }
+
+  .teks-container span {
+    margin-bottom: 10px;
+  }
+
+  .span-3 {
+    font-size: 12px;
+  }
+
+  .button-judul {
+    padding: 12px 18px;
+    font-size: 13px;
+  }
 }
