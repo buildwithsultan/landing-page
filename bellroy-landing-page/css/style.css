@@ -1,0 +1,196 @@
+/* Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.bellroy-teks {
+  font-size: large;
+  font-weight: bold;
+}
+
+.nav-container {
+  margin-right: 0; /* FIX: Dihapus margin 200px */
+}
+
+.ul-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  list-style-type: none;
+}
+
+.li-container {
+  color: #333;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.li-container:hover {
+  background-color: #406093;
+  color: white;
+  border-color: #547792;
+}
+
+button {
+  background: none;
+  color: #333;
+  margin: 5px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #406093;
+  color: white;
+  border-color: #547792;
+}
+
+.container-search {
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  padding-left: 15px;
+  width: 100%;
+  max-width: 900px; /* FIX: Lebih fleksibel di berbagai layar */
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.hero-section {
+  width: 100%;
+  height: calc(100vh - 135px);
+
+  background-image: url(../img/image.png);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.btn-bestsellers {
+  display: inline-block;
+  background-color: #e05a36;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (PC, IPAD, HP)
+   ========================================== */
+
+/* 1. LAPTOP KECIL / TABLET LANDSCAPE */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 10px 15px;
+  }
+
+  .li-container {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+}
+
+/* 2. TABLET / IPAD PORTRAIT */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .ul-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-section {
+    height: 60vh;
+    padding-left: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+}
+
+/* 3. HP / MOBILE */
+@media (max-width: 480px) {
+  .button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-section {
+    height: 70vh;
+    padding: 0 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .btn-bestsellers {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+}
