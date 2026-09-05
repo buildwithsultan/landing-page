@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding-top: 30px;
+  background-image: url(../img/image2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin: 0 clamp(20px, 12vw, 200px);
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  /* url("../img/image2.png"); */
+  /* background-size: cover; */
+}
+
+.stride-teks {
+  font-weight: bold;
+  color: #ffffff;
+  /* font-size: large; */
+}
+
+.ul-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #ffffff;
+  list-style-type: none;
+}
+
+.li-container {
+  border: 3px solid transparent;
+  border-radius: 10px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.li-container:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Background hitam transparan lebih pekat */
+  color: #f59e0b; /* Teks kuning/oranye hangat */
+  border-color: #f59e0b; /* Border warna oranye hangat */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Bayangan gelap di bawah */
+  transform: translateY(-2px);
+}
+
+.btn-header {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: black;
+  border-radius: 50px;
+  padding: 10px 15px;
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+.btn-header:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Background hitam transparan pekat */
+  color: #f59e0b; /* Teks berubah ke oranye/kuning hangat */
+  border-color: #f59e0b; /* Border menyala oranye hangat */
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); /* Efek glow oranye halus */
+  transform: translateY(-2px); /* Efek terangkat sedikit */
+}
+
+/* ========================================== */
+
+.main-container {
+  /* background-color: blue; */
+  margin: clamp(60px, 10vw, 100px) clamp(20px, 4vw, 50px);
+  padding: 10px 20px;
+}
+
+.deskripsi-container {
+  /* background-color: green; */
+  margin-bottom: 10px;
+  /* margin-right: 410px; */
+  min-height: 280px;
+  width: min(100%, 500px);
+}
+
+.judul-main {
+  color: #ffffff;
+  font-size: clamp(36px, 4vw, 50px);
+  /* font-weight: bold; */
+  margin-bottom: 20px;
+}
+
+.deskripsi-main {
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.btn-syj {
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: black;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-syj:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Background hitam transparan lebih pekat */
+  color: #f59e0b; /* Teks kuning/oranye hangat */
+  border-color: #f59e0b; /* Border warna oranye hangat */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Bayangan gelap di bawah */
+  transform: translateY(-2px);
+}
+
+.hero-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  width: min(100%, 630px);
+  /* height: 150px; */
+  /* background-color: grey; */
+  /* margin-right: 500px; */
+  margin-top: 80px;
+}
+
+.card-item {
+  color: #ffffff;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 8px 16px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.icon{
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .header-container {
+    margin: 0 20px;
+  }
+
+  .main-container {
+    margin: 60px 20px;
+  }
+
+  .deskripsi-container {
+    min-height: 0;
+  }
+
+  .judul-main {
+    font-size: 36px;
+  }
+
+  .hero-cards {
+    flex-direction: column;
+  }
+
+  .card-item {
+    width: 100%;
+  }
+}
