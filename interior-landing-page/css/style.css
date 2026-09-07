@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/image.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+
+  /* Bikin body persis setinggi layar dan gunakan Flexbox */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  padding: 10px 0 0 0; /* Rapikan padding */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+.header-container {
+  margin: 10px auto;
+  padding: 15px 30px;
+  width: min(100% - 32px, 1200px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.interior-teks {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: stencil, sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.ul-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.li-container {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  list-style-type: none;
+  font-size: large;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.li-container:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.angker {
+  font-size: large;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.angker:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ================= MAIN CONTAINER ================= */
+.main-container {
+  padding: 0;
+  margin: 0 auto;
+  width: min(100% - 32px, 1200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  /* flex: 1 akan mengambil SISA RUANG KOSONG secara presisi tanpa bikin scroll */
+  flex: 1;
+}
+
+/* --- Area Judul Utama --- */
+.judul-container {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.judul-teks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.span1 {
+  font-size: clamp(40px, 6vw, 75px);
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.span2 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 650px;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn-main {
+  padding: 12px 28px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111111;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-main:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= BOTTOM CARDS ================= */
+.bottom-cards {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Styling Dasar Kaca (Glassmorphism) */
+.card-left,
+.card-right {
+  background: rgba(45, 30, 20, 0.45);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 24px 28px;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Kartu Kiri (Rating & Review) --- */
+.card-left {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rating-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.rating-header .score {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.rating-header .stars {
+  color: #ffffff;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.card-left .quote {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.card-left .author {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* --- Kartu Kanan (Statistik Panjang) --- */
+.card-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-icon {
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.stat-text {
+  font-size: 0.95rem;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+
+.stat-sub {
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.75;
+  line-height: 1.2;
+}
+
+.stat-item h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  opacity: 0.7;
+  margin: 0 0 4px 0;
+}
+
+/* Garis Pembatas Vertikal (Divider) */
+.divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Alignment Helper */
+.center-text,
+.right-text {
+  flex-direction: column;
+  align-items: flex-start;
+}
